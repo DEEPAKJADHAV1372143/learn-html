@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Form Elements</title>
+    <style>
+        body{
+            font-family: "Comic Sans MS", sans-serif;
+        }
+        h2{
+            font-size: 12px;
+        }
+        form{
+            background-color: orange;
+            padding: 10px;
+            width: 400px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px green;
+        }
+    </style>
+</head>
+<body>
+
+
+    <!-- Simple Login Form -->
+    <h2>Simple Login Form</h2>
+    <form>
+        <label for="abc">UserName </label>
+        <input type="text" id="abc">
+        <br>
+        <label for="pass">Password</label>
+        <input type="password" id="pass">
+        <br>
+       <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+
+    <!-- Login form with Table -->
+    <h2>Login Form with Table</h2>
+    <form>
+        <table>
+            <tr>
+                <td>
+                    <label>User Name</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Password</label>
+                </td>
+                <td>
+                    <input type="password">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Submit">
+                </td>
+                <td>
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <!-- Select box with Options -->
+    <h2>Select Box with Options</h2>
+    <form>
+        <label>Select a Language</label>
+        <select>
+            <option>HTML</option>
+            <option>CSS</option>
+            <option>JavaScript</option>
+            <option>JQuery</option>
+            <option>Bootstrap</option>
+            <option>Angular JS</option>
+        </select>
+    </form>
+
+    <!-- Select Box with optgroup -->
+    <h2>Select Box with optgroup</h2>
+    <form>
+        <label>Select a Technology</label>
+        <select>
+            <optgroup label="languages">
+                <option>Java</option>
+                <option>PHP</option>
+            </optgroup>
+            <optgroup label="Scripts">
+                <option>JavaScript</option>
+                <option>Shell Script</option>
+            </optgroup>
+        </select>
+    </form>
+
+    <!-- Textarea box -->
+    <h2>Textarea box</h2>
+    <form>
+        <label>Your Message</label>
+        <textarea rows="5" cols="30"></textarea>
+    </form>
+
+    <!-- Datalist (HTML5) -->
+    <h2>Datalist (HTML5)</h2>
+    <form>
+        <label>Select a Language</label>
+        <input list="technologies">
+        <datalist id="technologies">
+            <option>HTML</option>
+            <option>CSS</option>
+            <option>JavaScript</option>
+            <option>JQuery</option>
+            <option>Bootstrap</option>
+            <option>Angular JS</option>
+        </datalist>
+    </form>
+
+
+<br><br><br>
+</body>
+</html>
