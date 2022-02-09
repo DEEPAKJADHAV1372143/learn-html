@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Arjundeep</title>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+			box-sizing: border-box;
+		}
+		body{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           min-height: 100vh;
+           background: linear-gradient(45deg,#8460ed,red);
+
+		}
+		.menu{
+       position: relative;
+       width: 400px;
+       min-height: 400px;
+       
+       display: flex;
+       justify-content: center;
+       align-items: center;
+		}
+		.menu li{
+			position: absolute;
+			left: 0px;
+			list-style: none;
+			transform-origin: 200px;
+			transition: 0.5s;
+			transition-delay: calc(0.1s * var(--i));
+			transform: rotate(0deg)translateX(160px);
+		}
+		.menu.active li{
+			transform: rotate(calc(360deg/-10* var(--i)));
+		}
+		.menu li a{
+			 background-color: white;
+            display: flex;
+            width: 80px;
+            height: 80px;
+            font-size: 30px;
+            border-radius: 50%;
+            justify-content: center;
+            align-items: center;
+            transform: rotate(calc(360deg/10* var(--i)));
+            box-shadow: 0 3px 4px wheat;
+            color: black;
+            transition: 0.5s;
+            text-decoration: none;
+		}
+		.menu li a:hover{
+			color: white;
+			background-color: #8aff66;
+		}
+		
+
+		.toggle{
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 0px 4px wheat;
+        font-size: 2rem;
+        transition:transform 1.25s;
+		}
+        .menu.active .toggle{
+         transform: rotate(360deg);
+        }
+       
+	</style>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="menu">
+	<div class="toggle">
+		<i class="fa fa-th"></i>
+	</div>
+	<li style="--i:0">
+		<a href="">
+			<i class="fa fa-google"></i>
+		</a>
+	</li>
+	<li style="--i:1">
+		<a href="https://github.com/DEEPAKJADHAV1372143/learn-html/tree/master">
+			<i class="fa fa-instagram"></i>
+		</a>
+	</li>
+	<li style="--i:2">
+		<a href="">
+			<i class="fa fa-twitter"></i>
+		</a>
+	</li>
+	<li style="--i:3">
+		<a href="">
+			<i class="fa fa-github"></i>
+		</a>
+	</li>
+	<li style="--i:4">
+		<a href="">
+			<i class="fa fa-pinterest"></i>
+		</a>
+	</li>
+	<li style="--i:5">
+		<a href="">
+			<i class="fa fa-apple"></i>
+		</a>
+	</li>
+	<li style="--i:6">
+		<a href="">
+			<i class="fa fa-whatsapp"></i>
+		</a>
+	</li>
+	<li style="--i:7">
+		<a href="">
+			<i class="fa fa-user"></i>
+		</a>
+	</li>
+	<li style="--i:8">
+		<a href="">
+			<i class="fa fa-signal"></i>
+		</a>
+	</li>
+	<li style="--i:9">
+		<a href="">
+			<i class="fa fa-home"></i>
+		</a>
+	</li>
+	
+
+</div>
+<script type="text/javascript">
+	var toggle=document.querySelector(".toggle");
+	var menu=document.querySelector(".menu");
+	toggle.onclick=function(){
+		menu.classList.toggle("active");
+	}
+	
+</script>
+</body>
+</html>
